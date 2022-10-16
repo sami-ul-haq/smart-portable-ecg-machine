@@ -38,7 +38,7 @@
     transition: all 0.5s ease;
 
     &:hover {
-      color: blue;
+      color: blue !important;
       background-color: #fff;
     }
 }
