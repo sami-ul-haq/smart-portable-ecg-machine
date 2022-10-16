@@ -119,8 +119,13 @@
     }
 
     .third-screen {
+      text-align: center;
       .btn-back {
         @include buttonStyle;
+        a {
+          color: #fff;
+          text-decoration: none;
+        }
       }
     }
   }

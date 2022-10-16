@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import Layout from "./Layout";
 import { Line, LineChart, ResponsiveContainer, XAxis, YAxis } from "recharts";
 import { points } from "../data";
@@ -23,7 +23,11 @@ const GraphScreen = () => {
             </ResponsiveContainer>
 
             <div className="third-footer">
-                <button className="btn-back">Back</button>
+                <button className="btn-back">
+                <Link to={`/`}>
+                Back
+                </Link>
+                </button>
             </div>
 
             </div>
