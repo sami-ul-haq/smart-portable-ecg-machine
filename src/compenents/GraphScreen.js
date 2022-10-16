@@ -11,7 +11,8 @@ const GraphScreen = () => {
 
     return (
         <Layout>
-            {/* <div className="third-screen">This is grapgh screen {state}</div> */}
+            <div className="third-screen">
+
 
             <ResponsiveContainer width="100%" aspect={3}>
                 <LineChart data={points}>
@@ -21,6 +22,11 @@ const GraphScreen = () => {
                 </LineChart>
             </ResponsiveContainer>
 
+            <div className="third-footer">
+                <button className="btn-back">Back</button>
+            </div>
+
+            </div>
         </Layout>
     )
 }
