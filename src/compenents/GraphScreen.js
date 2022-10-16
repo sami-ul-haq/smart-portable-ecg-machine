@@ -1,5 +1,4 @@
 import { Link, useLocation } from "react-router-dom"
-import Layout from "./Layout";
 import { CartesianGrid, Legend, Line, LineChart, ResponsiveContainer, Tooltip, XAxis, YAxis } from "recharts";
 import { points } from "../data";
 
