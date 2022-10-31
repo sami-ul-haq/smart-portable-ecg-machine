@@ -6,7 +6,7 @@ import { onValue, ref } from "firebase/database";
 // import { points } from "../data";
 
 const GraphScreen = () => {
-    const [ecgError, setEcgError] = useState("");
+    // const [ecgError, setEcgError] = useState("");
     const [ecgData, setEcgData] = useState([]);
     console.log("ECG data ", ecgData[0]);
 
@@ -16,19 +16,20 @@ const GraphScreen = () => {
 
     const dbRef = ref(db, `ECG/${state.id}`);
 
-    const getFirebaseData = async () => {
-        try{   
-            onValue(dbRef, (snapshot) => {
-                const data = snapshot.val()
-                setEcgData(data);
-            });
-        } catch(error){
-
-        }
-    }
 
     useEffect(() => {
+        const getFirebaseData = async () => {
+            try {
+                onValue(dbRef, (snapshot) => {
+                    const data = snapshot.val()
+                    setEcgData(data);
+                });
+            } catch (error) {
+
+            }
+        }
         getFirebaseData();
+        // eslint-disable-next-line
     }, [])
 
 
